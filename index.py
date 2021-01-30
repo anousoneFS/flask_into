@@ -1,11 +1,11 @@
-import  flask from Flask
+from flask import Flask 
 
 app = Flask(__name__)
 
 def name(first_name, last_name):
     return first_name + last_name
 
-if __main__ = '__name__':
+if __name__ == "__main__":
     print("hahaha")
     print(name("anousone", "worlakoumman"))
     print(name("sone", "freestyle"))
