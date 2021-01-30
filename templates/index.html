@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>my web</title>
+</head>
+
+<body>
+    <h1>hello {{name}}</h1>
+    <ul>
+        {% for i in news %}
+        <li><a href="{{url_for('show_news_item', id=i.id)}}">{{i.title}}</a></li>
+        {% endfor %}
+    </ul>
+
+    <form action="{{url_for('create_news_item')}}" , method="post">
+        title: <input name="title" /> <br/> body: <textarea name="body"></textarea><br/>
+        <input type="submit" , value="save" />
+
+    </form>
+</body>
+
+</html>
